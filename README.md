@@ -2,7 +2,7 @@
 
 ### To run locally
 * cd frontend
-* cd covid-dashboard-frontend
+* cd client
 * $ yarn
 * $ yarn start
 
