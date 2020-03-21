@@ -25,6 +25,7 @@ $default-alert: #F03631;
 // Site Background
 html {
   background: $default-black;
+  width: 100vw;
 }
 
 // Global Mobile Classes
@@ -45,6 +46,10 @@ html {
 // App Wrapper
 .App {
   text-align: center;
+  width: 100vw;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 
 // Feature-Tile Wrapper
@@ -56,6 +61,8 @@ html {
   background: $default-carbon;
   border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+
+  overflow: hidden;
 }
 
 // Text

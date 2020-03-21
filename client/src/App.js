@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
+
+      <Navigation/>
 
         <Header/>
 
@@ -25,6 +29,9 @@ function App() {
                 <Header/>
             </div>
         </div>
+
+
+        <Footer/>
 
     </div>
   );
