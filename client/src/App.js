@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
-import Header from "./components/Header";
-import Twitter from "./components/twitter/Twitter"
+import Header from "./components/header/Header";
+import Twitter from "./components/Twitter"
 import Navigation from "./components/atoms/Navigation";
 import Footer from "./components/atoms/Footer";
 import TotalPercentages from "./components/TotalPercentages";
