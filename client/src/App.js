@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header";
+import Twitter from "./components/twitter/Twitter"
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
         <div className={'columns is-gapless'}>
             <div className={'column is-half tile'}>
-                <Header/>
+                <Twitter/>
             </div>
             <div className={'column is-half tile'}>
                 <Header/>
