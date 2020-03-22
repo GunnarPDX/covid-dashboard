@@ -1,0 +1,17 @@
+.progress-donut-container {
+  padding: 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.red-donut {
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: url(#redFillGradient) !important;
+  }
+}
+
+.blue-donut {
+  .CircularProgressbar .CircularProgressbar-path {
+    stroke: url(#blueFillGradient) !important;
+  }
+}
