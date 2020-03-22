@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.scss';
 import Header from "./components/Header";
+import Twitter from "./components/twitter/Twitter"
 import Navigation from "./components/atoms/Navigation";
 import Footer from "./components/atoms/Footer";
 import TotalPercentages from "./components/TotalPercentages";
@@ -21,7 +22,7 @@ function App() {
                 <Map/>
             </div>
             <div className={'column is-half tile'}>
-                <Header/>
+                <Twitter/>
             </div>
         </div>
 
