@@ -6,11 +6,15 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "d3-fetch": "^1.1.2",
+    "d3-scale": "^3.2.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.0",
     "react-twitter-embed": "^3.0.3"
+    "react-simple-maps": "^1.0.0-beta.0",
+    "react-circular-progressbar": "^2.0.3"
   },
   "scripts": {
     "start": "react-scripts start",

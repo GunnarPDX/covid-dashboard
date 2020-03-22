@@ -2,7 +2,7 @@
 // Main UI Colors
 $default-black: #1B1B1D;          // Background
 $default-carbon: #252429;         // Tile Color
-$default-charcoal: #373737;       // Trim
+$default-charcoal: #323137;       // Trim
 
 $default-white: #F3F4F7;          // Default Text
 $default-light-grey: #73757a;     // Sub-Captions
@@ -25,6 +25,7 @@ $default-alert: #F03631;
 // Site Background
 html {
   background: $default-black;
+  width: 100vw;
 }
 
 // Global Mobile Classes
@@ -45,6 +46,10 @@ html {
 // App Wrapper
 .App {
   text-align: center;
+  width: 100vw;
+  padding-left: 10px;
+  padding-right: 10px;
+
 }
 
 // Feature-Tile Wrapper
@@ -56,19 +61,23 @@ html {
   background: $default-carbon;
   border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+
+  overflow: hidden;
 }
 
 // Text
 $default-font: 'Helvetica Neue', sans-serif;
 
 h1 {
-  font-size: 2.5rem;
+  font-weight: bold;
+  font-size: 1.75rem;
   font-family: $default-font;
   color: $default-white;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-weight: bold;
+  font-size: 1.25rem;
   font-family: $default-font;
   color: $default-white;
 }
