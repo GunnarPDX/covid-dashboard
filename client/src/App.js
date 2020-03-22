@@ -3,6 +3,7 @@ import './App.scss';
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import MapHeader from "./components/MapHeader";
 import TotalPercentages from "./components/TotalPercentages";
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
         <div className={'columns is-gapless'}>
             <div className={'column is-half tile'}>
-                <Header/>
+                <MapHeader/>
             </div>
             <div className={'column is-half tile'}>
                 <Header/>
