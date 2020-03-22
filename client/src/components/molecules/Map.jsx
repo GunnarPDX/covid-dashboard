@@ -11,7 +11,7 @@ import {
 
 const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
 
-const colorScale = scaleLinear().domain([0.29, 0.68]).range(["#ffedea", "#ff5233"]);
+const colorScale = scaleLinear().domain([0.29, 0.68]).range(["#ffa62b", "#ff5233"]);
 
 
 
@@ -51,7 +51,7 @@ const Map = () => {
                                     <Geography
                                         key={geo.rsmKey}
                                         geography={geo}
-                                        fill={d ? colorScale(d["2017"]) : "#dddddd"}
+                                        fill={d ? colorScale(d["2017"]) : "#73757a"}
                                     />
                                 );
                             })

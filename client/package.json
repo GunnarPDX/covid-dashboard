@@ -10,12 +10,13 @@
     "d3-scale": "^3.2.1",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-circular-progressbar": "^2.0.3",
     "react-dom": "^16.13.1",
+    "react-muuri": "^0.3.0",
     "react-scripts": "3.4.0",
-    "simplebar-react": "^2.1.0",
-    "react-twitter-embed": "^3.0.3",
     "react-simple-maps": "^1.0.0-beta.0",
-    "react-circular-progressbar": "^2.0.3"
+    "react-twitter-embed": "^3.0.3",
+    "simplebar-react": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

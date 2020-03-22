@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.scss';
-import Header from "./components/header/Header";
-import Twitter from "./components/Twitter"
+import Header from "./components/molecules/header/Header";
+import Twitter from "./components/molecules/Twitter"
 import Navigation from "./components/atoms/Navigation";
 import Footer from "./components/atoms/Footer";
-import TotalPercentages from "./components/TotalPercentages";
-import Map from "./components/Map";
-import NewsFeed from "./components/NewsFeed";
+import TotalPercentages from "./components/molecules/TotalPercentages";
+import Map from "./components/molecules/Map";
+import NewsFeed from "./components/molecules/news/NewsFeed";
+import MainDash from "./components/views/dashboard/MainDash";
 
 function App() {
 
@@ -38,6 +39,14 @@ function App() {
         </div>
 
       <Footer />
+
+      <br/>
+      <br/>
+      <br/>
+
+      <MainDash/>
+
+
     </div>
   );
 }
