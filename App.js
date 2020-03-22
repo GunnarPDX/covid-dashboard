@@ -15,11 +15,11 @@ function App() {
 
       <Navigation/>
 
-        <Header/>
+        <MapHeader/>
 
         <div className={'columns is-gapless'}>
             <div className={'column is-half tile'}>
-                <MapHeader/>
+                <Header/>
             </div>
             <div className={'column is-half tile'}>
                 <Header/>
