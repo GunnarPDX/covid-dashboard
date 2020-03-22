@@ -8,7 +8,8 @@ const Twitter = () => {
         <div className={'tile-container'}>            
             <TwitterTimelineEmbed 
             sourceType="url" 
-            url="https://twitter.com/mashable/lists/social-media" 
+            url="https://twitter.com/villatrue/lists/covid19"
+            theme="dark" 
             options={{height: 400}} />
         </div>
     )
