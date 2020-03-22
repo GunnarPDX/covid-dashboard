@@ -25,19 +25,21 @@ function App() {
                 <Twitter/>
             </div>
         </div>
-
-        <div className={'columns is-gapless'}>
-            <div className={'column is-half tile'}>
-                <TotalPercentages/>
-            </div>
-            <div className={'column tile'}>
-                <Header/>
-            </div>
+        <div className={'column is-half tile'}>
+          <Header />
         </div>
+      </div>
 
+      <div className={'columns is-gapless'}>
+        <div className={'column is-half tile'}>
+          <TotalPercentages />
+        </div>
+        <div className={'column tile'}>
+          <NewsFeed />
+        </div>
+      </div>
 
-        <Footer/>
-
+      <Footer />
     </div>
   );
 }

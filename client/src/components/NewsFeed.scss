@@ -1,0 +1,19 @@
+$default-light-grey: #73757a; // Sub-Captions
+$section-padding: 0rem 2.5rem;
+
+.section {
+  padding: $section-padding;
+}
+
+.description-container {
+  padding-bottom: 0.5rem;
+}
+
+.level-right {
+  padding-right: 2rem;
+}
+
+.title {
+  color: $default-light-grey;
+  font-size: 1.5rem;
+}
