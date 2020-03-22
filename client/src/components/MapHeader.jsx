@@ -1,6 +1,7 @@
 import './header.scss'
 import React from 'react'
-import CovidMap from './CovidMap'
+import CovidMap from "./CovidMap";
+
 const MapHeader = () => {
     return (
         <div className={'tile-container'}>

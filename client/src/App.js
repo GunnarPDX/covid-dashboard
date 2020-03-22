@@ -3,8 +3,8 @@ import './App.scss';
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
-import MapHeader from "./components/MapHeader";
 import TotalPercentages from "./components/TotalPercentages";
+import MapHeader from "./components/MapHeader";
 
 function App() {
 
@@ -15,7 +15,8 @@ function App() {
 
       <Navigation/>
 
-        <MapHeader/>
+        {/* <MapHeader/> */}
+
 
         <div className={'columns is-gapless'}>
             <div className={'column is-half tile'}>
