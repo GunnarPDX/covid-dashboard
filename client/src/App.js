@@ -1,22 +1,29 @@
 import React from 'react';
 import './App.scss';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import TotalPercentages from './components/TotalPercentages';
-import MapHeader from './components/MapHeader';
-import NewsFeed from './components/NewsFeed';
+import Header from "./components/Header";
+import Twitter from "./components/twitter/Twitter"
+import Navigation from "./components/atoms/Navigation";
+import Footer from "./components/atoms/Footer";
+import TotalPercentages from "./components/TotalPercentages";
+import Map from "./components/Map";
 
 function App() {
+
   return (
-    <div className='App'>
-      <Navigation />
+    <div className="App">
 
-      {/* <MapHeader/> */}
+      <Navigation/>
 
-      <div className={'columns is-gapless'}>
-        <div className={'column is-half tile'}>
-          <Header />
+
+        <Header/>
+
+        <div className={'columns is-gapless'}>
+            <div className={'column is-half tile'}>
+                <Map/>
+            </div>
+            <div className={'column is-half tile'}>
+                <Twitter/>
+            </div>
         </div>
         <div className={'column is-half tile'}>
           <Header />
