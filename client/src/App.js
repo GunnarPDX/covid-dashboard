@@ -3,8 +3,12 @@ import './App.scss';
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import TotalPercentages from "./components/TotalPercentages";
 
 function App() {
+
+
+
   return (
     <div className="App">
 
@@ -22,8 +26,8 @@ function App() {
         </div>
 
         <div className={'columns is-gapless'}>
-            <div className={'column is-one-quarter tile'}>
-                <Header/>
+            <div className={'column is-half tile'}>
+                <TotalPercentages/>
             </div>
             <div className={'column tile'}>
                 <Header/>
