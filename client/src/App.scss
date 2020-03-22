@@ -1,26 +1,24 @@
-
 // Main UI Colors
-$default-black: #1B1B1D;          // Background
-$default-carbon: #252429;         // Tile Color
-$default-charcoal: #323137;       // Trim
+$default-black: #1b1b1d; // Background
+$default-carbon: #252429; // Tile Color
+$default-charcoal: #323137; // Trim
 
-$default-white: #F3F4F7;          // Default Text
-$default-light-grey: #73757a;     // Sub-Captions
+$default-white: #f3f4f7; // Default Text
+$default-light-grey: #73757a; // Sub-Captions
 
 // Highlights
-$default-blue: #07A3EF;
-$light-blue: #0CFCE0;
+$default-blue: #07a3ef;
+$light-blue: #0cfce0;
 
-$default-purple: #821EE5;
-$default-magenta: #F12D81;
-$light-magenta: #FB816C;
+$default-purple: #821ee5;
+$default-magenta: #f12d81;
+$light-magenta: #fb816c;
 
-$default-alert: #F03631;
+$default-alert: #f03631;
 
 // Gradients
 //$default-blue-gradient: linear-gradient(96deg, $default-blue) 0%, $light-blue 100%);
 //$default-magenta-gradient: linear-gradient(96deg, $default-purple 0%, $default-magenta 47%, $light-magenta 100%);
-
 
 // Site Background
 html {
@@ -30,7 +28,6 @@ html {
 
 // Global Mobile Classes
 @media only screen and (max-width: 768px) {
-
   // Add this to hide elements on mobile
   .hide-on-mobile {
     display: none !important;
@@ -40,7 +37,6 @@ html {
     padding: 0 !important;
     margin: 0 !important;
   }
-
 }
 
 // App Wrapper
@@ -49,7 +45,6 @@ html {
   width: 100vw;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 // Feature-Tile Wrapper
