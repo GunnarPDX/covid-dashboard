@@ -6,13 +6,14 @@ import Navigation from "./components/atoms/Navigation";
 import Footer from "./components/atoms/Footer";
 import TotalPercentages from "./components/TotalPercentages";
 import Map from "./components/Map";
+import NewsFeed from "./components/NewsFeed";
 
 function App() {
 
   return (
     <div className="App">
 
-      <Navigation/>
+        <Navigation/>
 
 
         <Header/>
@@ -26,18 +27,17 @@ function App() {
             </div>
         </div>
 
+
         <div className={'columns is-gapless'}>
             <div className={'column is-half tile'}>
-                <TotalPercentages/>
+                <TotalPercentages />
             </div>
             <div className={'column tile'}>
-                <Header/>
+                <NewsFeed />
             </div>
         </div>
 
-
-        <Footer/>
-
+      <Footer />
     </div>
   );
 }
