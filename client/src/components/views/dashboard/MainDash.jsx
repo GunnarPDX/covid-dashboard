@@ -6,6 +6,7 @@ import Map from "../../molecules/Map";
 import Twitter from "../../molecules/Twitter";
 import NewsFeed from "../../molecules/news/NewsFeed";
 import TotalPercentages from "../../molecules/TotalPercentages";
+import Header from "../../molecules/header/Header";
 
 class MainDash extends Component {
     constructor () {
@@ -59,6 +60,11 @@ class MainDash extends Component {
 
 
                 <div ref={gridElement => this.gridElement = gridElement} className={'grid'}>
+                    <div className="item item-full">
+                        <div className="item-content">
+                            <Header/>
+                        </div>
+                    </div>
                     <div className="item item-half">
                         <div className="item-content">
                             <Map/>
@@ -66,17 +72,17 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
+                            <TotalPercentages/>
+                        </div>
+                    </div>
+                    <div className="item item-quarter">
+                        <div className="item-content">
                             <Twitter/>
                         </div>
                     </div>
-                    <div className="item item-half">
+                    <div className="item item-quarter">
                         <div className="item-content">
                             <NewsFeed/>
-                        </div>
-                    </div>
-                    <div className="item item-half">
-                        <div className="item-content">
-                            <TotalPercentages/>
                         </div>
                     </div>
                 </div>

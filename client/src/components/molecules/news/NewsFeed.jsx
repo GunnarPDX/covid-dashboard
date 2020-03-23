@@ -36,25 +36,27 @@ const NewsFeed = props => {
   const allNews = data.news.map(news => {
     return (
       <React.Fragment>
-        <div className={'description-container'}>
-          <p className={'has-text-left'}> {news.description}</p>
+        <div className={'article-container'}>
+          <div className={'description-container'}>
+            <p className={'has-text-left'}> {news.description}</p>
+          </div>
+          <nav className={'level'}>
+            <div className={'level-left'}>
+              <div className={'level-item'}>
+                <h3>
+                  {news.origin} | {news.date}
+                </h3>
+              </div>
+            </div>
+            <div className={'level-right'}>
+              <div className={'level-item'}>
+                <h3 className={'has-text-info'}>
+                  <a href={news.link}> LEARN MORE ></a>
+                </h3>
+              </div>
+            </div>
+          </nav>
         </div>
-        <nav className={'level'}>
-          <div className={'level-left'}>
-            <div className={'level-item'}>
-              <h3>
-                {news.origin} | {news.date}
-              </h3>
-            </div>
-          </div>
-          <div className={'level-right'}>
-            <div className={'level-item'}>
-              <h3 className={'has-text-info'}>
-                <a href={news.link}> LEARN MORE ></a>
-              </h3>
-            </div>
-          </div>
-        </nav>
       </React.Fragment>
     );
   });

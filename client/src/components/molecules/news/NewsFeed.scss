@@ -1,5 +1,5 @@
 $default-light-grey: #73757a; // Sub-Captions
-$section-padding: 0rem 2.5rem;
+$section-padding: 0.5rem;
 
 .section {
   padding: $section-padding;
@@ -7,6 +7,13 @@ $section-padding: 0rem 2.5rem;
 
 .description-container {
   padding-bottom: 0.5rem;
+}
+
+.article-container {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #323137;
+  margin-bottom: 10px;
 }
 
 .level-right {
