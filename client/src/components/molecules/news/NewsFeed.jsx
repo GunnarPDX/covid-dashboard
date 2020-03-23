@@ -42,9 +42,9 @@ const NewsFeed = props => {
         <nav className={'level'}>
           <div className={'level-left'}>
             <div className={'level-item'}>
-              <p>
+              <h3>
                 {news.origin} | {news.date}
-              </p>
+              </h3>
             </div>
           </div>
           <div className={'level-right'}>
@@ -61,7 +61,7 @@ const NewsFeed = props => {
 
   return (
     <div className={'tile-container'}>
-      <h1 className={'title'}>Global News</h1>
+      <h1 className={''}>Global News</h1>
       <SimpleBar style={{ maxHeight: 250 }}>
         <section className={'section'}>
           <div className={'container'}>
