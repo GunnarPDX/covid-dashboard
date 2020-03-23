@@ -8,6 +8,8 @@ import NewsFeed from "../../molecules/news/NewsFeed";
 import TotalPercentages from "../../molecules/TotalPercentages";
 import Header from "../../molecules/header/Header";
 
+import testProps from "../../Props";
+
 class MainDash extends Component {
     constructor () {
         super();
@@ -26,7 +28,7 @@ class MainDash extends Component {
 
         // This refreshes the grid to override 'height: auto' with the elements actual heights
         // Super janky but works for now.
-        // To fix this the grid methods need to be passed into the iframes onLoad prop as a callback
+        // To fix this the grid-methods need to be passed into the iframe's onLoad prop as a callback
         setTimeout(() => {
             this.grid.getMethod('refreshItems');
             this.grid.getMethod('layout');
@@ -55,6 +57,8 @@ class MainDash extends Component {
     }
 
     render () {
+        let props = testProps;
+
         return (
             <div className={''}>
 
@@ -72,17 +76,17 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            <TotalPercentages/>
+                            <TotalPercentages {...props}/>
                         </div>
                     </div>
-                    <div className="item item-quarter">
+                    <div className="item item-half">
                         <div className="item-content">
                             <Twitter/>
                         </div>
                     </div>
-                    <div className="item item-quarter">
+                    <div className="item item-half">
                         <div className="item-content">
-                            <NewsFeed/>
+                            <NewsFeed {...props}/>
                         </div>
                     </div>
                 </div>
