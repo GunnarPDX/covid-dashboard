@@ -21,6 +21,30 @@ class MainDash extends Component {
         });
 
         this.grid.getEvent('dragEnd');
+
+
+        // This refreshes the grid to override 'height: auto' with the elements actual heights
+        // Super janky but works for now
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 100);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 200);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 400);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 600);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 1000);
     }
 
     componentWillUnmount () {
