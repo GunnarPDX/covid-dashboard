@@ -24,7 +24,8 @@ class MainDash extends Component {
 
 
         // This refreshes the grid to override 'height: auto' with the elements actual heights
-        // Super janky but works for now
+        // Super janky but works for now.
+        // To fix this the grid methods need to be passed into the iframes onLoad prop as a callback
         setTimeout(() => {
             this.grid.getMethod('refreshItems');
             this.grid.getMethod('layout');
