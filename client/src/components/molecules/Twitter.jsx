@@ -10,7 +10,7 @@ const Twitter = () => {
             sourceType="url" 
             url="https://twitter.com/villatrue/lists/covid19"
             theme="dark" 
-            options={{height: 400, zIndex: 4}} />
+            options={{height: 400}} />
         </div>
     )
 };

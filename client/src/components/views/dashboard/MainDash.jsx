@@ -16,7 +16,7 @@ class MainDash extends Component {
         this.grid = new MuuriGrid({
             node: this.gridElement,
             defaultOptions: {
-                dragEnabled: true
+                dragEnabled: false
             },
         });
 
@@ -45,6 +45,7 @@ class MainDash extends Component {
             this.grid.getMethod('refreshItems');
             this.grid.getMethod('layout');
         }, 1000);
+
     }
 
     componentWillUnmount () {
