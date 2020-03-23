@@ -1,0 +1,44 @@
+.grid {
+  position: relative;
+}
+
+
+.item {
+  color: white;
+  //cursor: grab;
+  height: auto;
+  position: absolute;
+}
+
+.item-full {
+  width: 100%;
+}
+.item-half {
+  width: 50%
+}
+.item-third {
+  width: 33.33%;
+}
+.item-quarter {
+  width: 25%
+}
+
+.muuri-item-dragging {
+  z-index: 3;
+}
+
+.muuri-item-releasing {
+  z-index: 2;
+}
+
+.muuri-item-hidden {
+  z-index: 0;
+}
+
+.box1 {
+  background-color: orange;
+}
+
+.box2 {
+  background-color: blue;
+}

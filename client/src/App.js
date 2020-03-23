@@ -1,18 +1,20 @@
 import React from 'react';
 import './App.scss';
-import Header from "./components/Header";
-import Twitter from "./components/twitter/Twitter"
+import Header from "./components/molecules/header/Header";
+import Twitter from "./components/molecules/Twitter"
 import Navigation from "./components/atoms/Navigation";
 import Footer from "./components/atoms/Footer";
-import TotalPercentages from "./components/TotalPercentages";
-import Map from "./components/Map";
+import TotalPercentages from "./components/molecules/TotalPercentages";
+import Map from "./components/molecules/Map";
+import NewsFeed from "./components/molecules/news/NewsFeed";
+import MainDash from "./components/views/dashboard/MainDash";
 
 function App() {
 
   return (
     <div className="App">
 
-      <Navigation/>
+        <Navigation/>
 
 
         <Header/>
@@ -25,21 +27,26 @@ function App() {
                 <Twitter/>
             </div>
         </div>
-        <div className={'column is-half tile'}>
-          <Header />
-        </div>
-      </div>
 
-      <div className={'columns is-gapless'}>
-        <div className={'column is-half tile'}>
-          <TotalPercentages />
+
+        <div className={'columns is-gapless'}>
+            <div className={'column is-half tile'}>
+                <TotalPercentages />
+            </div>
+            <div className={'column tile'}>
+                <NewsFeed />
+            </div>
         </div>
-        <div className={'column tile'}>
-          <NewsFeed />
-        </div>
-      </div>
 
       <Footer />
+
+      <br/>
+      <br/>
+      <br/>
+
+      <MainDash/>
+
+
     </div>
   );
 }
