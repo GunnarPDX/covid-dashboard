@@ -66,7 +66,7 @@ class MainDash extends Component {
                 <div ref={gridElement => this.gridElement = gridElement} className={'grid'}>
                     <div className="item item-full">
                         <div className="item-content">
-                            <Header/>
+                            <Header {...props}/>
                         </div>
                     </div>
                     <div className="item item-half">
