@@ -71,7 +71,7 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            <Map/>
+                            <Map {...props}/>
                         </div>
                     </div>
                     <div className="item item-half">
