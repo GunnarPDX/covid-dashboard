@@ -4,8 +4,8 @@ import ProgressDonut from "../atoms/ProgressDonut";
 
 const TotalPercentages = (props) => {
 
-    let death_percentage = Math.round((props.stats.deaths / props.stats.cases) * 100);
-    let recovered_percentages = Math.round((props.stats.recovered / props.stats.cases) * 100);
+    let death_percentage = Math.round((props.stats.deaths / props.stats.cases) * 1000) / 10;
+    let recovered_percentages = Math.round((props.stats.recovered / props.stats.cases) * 1000) / 10;
 
     let infectedProps = {
         percentage: death_percentage,
