@@ -17,6 +17,7 @@ function App() {
         <Navigation/>
 
 
+        {/*
         <Header/>
 
         <div className={'columns is-gapless'}>
@@ -37,14 +38,18 @@ function App() {
                 <NewsFeed />
             </div>
         </div>
+        */}
+
+
+
+
+
+
+
+
+        <MainDash/>
 
       <Footer />
-
-      <br/>
-      <br/>
-      <br/>
-
-      <MainDash/>
 
 
     </div>

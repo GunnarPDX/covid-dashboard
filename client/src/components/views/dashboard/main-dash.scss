@@ -10,6 +10,15 @@
   position: absolute;
 }
 
+@media only screen and (max-width: 768px) {
+  //make tiles full width on mobile
+
+  .item-full, .item-half, .item-quarter, .item-third {
+    width: 100% !important;
+  }
+
+}
+
 .item-full {
   width: 100%;
 }

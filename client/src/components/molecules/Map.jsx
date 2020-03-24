@@ -15,8 +15,11 @@ const colorScale = scaleLinear().domain([0.29, 0.68]).range(["#ffa62b", "#ff5233
 
 
 
-const Map = () => {
+const Map = (props) => {
 
+    props.countries.map(location => {
+        console.log(location);
+    });
 
     const [data, setData] = useState([]);
 
