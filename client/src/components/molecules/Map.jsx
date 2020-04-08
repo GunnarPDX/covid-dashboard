@@ -17,11 +17,8 @@ const colorScale = scaleLog().domain([1, 2000]).range(["#f87e7d", "#9f0050"]);
 
 const Map = (props) => {
 
-    props.countries.data.map(location => {
-        console.log(location.country);
-    });
 
-    const [data, setData] = useState([]);
+    //const [data, setData] = useState([]);
 
     /*
     useEffect(() => {

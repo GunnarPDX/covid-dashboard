@@ -1,25 +1,44 @@
-import React from "react";
+import React, { useState } from 'react'
 import Chart from "react-apexcharts";
 
 
 const Timeline = (props) => {
 
+    const dates = (data) => {
+        let arr = [];
+        for(let i = 0; i < data.timeline.data.length; i++) {
+            arr.push(data.timeline.data[i].date);
+        }
+        return arr;
+    };
+
+    const confirmed = (data) => {
+        let arr = [];
+        for(let i = 0; i < data.timeline.data.length; i++) {
+            arr.push(data.timeline.data[i].confirmed);
+        }
+        return arr;
+    };
+
+    const [dateArr] = useState(dates(props));
+    const [countArr] = useState(confirmed(props));
+
+
+
     let data = {
         options: {
             chart: {
                 id: "timeline",
-                toolbar: {
-                    show: false
-                },
+
                 background: "#252429"
             },
             xaxis: {
-                categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+                categories: dateArr
             },
-            colors: [ "#821ee5"],
+            colors: [ "#e334e5"],
             stroke: {
                 width: 7,
-                curve: 'smooth'
+                curve: 'straight'
             },
             fill: {
                 type: 'gradient',
@@ -41,7 +60,7 @@ const Timeline = (props) => {
         series: [
             {
                 name: "series-1",
-                data: [30, 40, 45, 50, 49, 60, 70, 91]
+                data: countArr
             }
         ],
 
