@@ -9,6 +9,7 @@ import TotalPercentages from "../../molecules/TotalPercentages";
 import Header from "../../molecules/header/Header";
 
 import testProps from "../../Props";
+import Timeline from "../../molecules/Timeline";
 
 class MainDash extends Component {
     constructor () {
@@ -81,12 +82,17 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            <Twitter/>
+                            <Timeline {...props}/>
                         </div>
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
                             <NewsFeed {...props}/>
+                        </div>
+                    </div>
+                    <div className="item item-half">
+                        <div className="item-content">
+                            <Twitter/>
                         </div>
                     </div>
                 </div>
