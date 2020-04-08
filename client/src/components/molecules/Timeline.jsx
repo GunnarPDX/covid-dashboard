@@ -59,7 +59,7 @@ const Timeline = (props) => {
         },
         series: [
             {
-                name: "series-1",
+                name: "US Confirmed Cases",
                 data: countArr
             }
         ],
@@ -69,7 +69,7 @@ const Timeline = (props) => {
 
     return(
         <div className={'tile-container'}>
-            <h1>US Cases</h1>
+            <h1>US COVID Timeline</h1>
             <Chart
                 options={data.options}
                 series={data.series}
