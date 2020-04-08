@@ -35,7 +35,7 @@ const Timeline = (props) => {
             xaxis: {
                 categories: dateArr
             },
-            colors: [ "#e334e5"],
+            colors: [ "#e334e5", '#41d2e7'],
             stroke: {
                 width: 7,
                 curve: 'straight'
@@ -59,7 +59,7 @@ const Timeline = (props) => {
         },
         series: [
             {
-                name: "US Confirmed Cases",
+                name: "USA Infected",
                 data: countArr
             }
         ],

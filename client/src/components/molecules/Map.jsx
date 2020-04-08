@@ -30,7 +30,7 @@ const Map = (props) => {
 
     return (
         <div className={'tile-container'}>
-            <h1>Global Map</h1>
+            <h1>Global Heat Map</h1>
 
             <ComposableMap
                 height={400}

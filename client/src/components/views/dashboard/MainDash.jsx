@@ -12,11 +12,24 @@ import testProps from "../../Props";
 import Timeline from "../../molecules/Timeline";
 
 class MainDash extends Component {
-    constructor () {
-        super();
-    }
+    state = {
+        props: null
+    };
 
     componentDidMount () {
+
+        /*
+        fetch('/')
+            .then(resp => resp.json())
+            .then(resp => {
+                console.log(resp);
+                this.setState({
+                    props: resp
+                })
+            });
+
+         */
+
         this.grid = new MuuriGrid({
             node: this.gridElement,
             defaultOptions: {
@@ -26,7 +39,15 @@ class MainDash extends Component {
 
         this.grid.getEvent('dragEnd');
 
+        this.refreshGrid();
 
+    }
+
+    componentWillUnmount () {
+        this.grid.getMethod('destroy');
+    }
+
+    refreshGrid = () => {
         // This refreshes the grid to override 'height: auto' with the elements actual heights
         // Super janky but works for now.
         // To fix this the grid-methods need to be passed into the iframe's onLoad prop as a callback
@@ -51,11 +72,7 @@ class MainDash extends Component {
             this.grid.getMethod('layout');
         }, 1000);
 
-    }
-
-    componentWillUnmount () {
-        this.grid.getMethod('destroy');
-    }
+    };
 
     render () {
         let props = testProps;
