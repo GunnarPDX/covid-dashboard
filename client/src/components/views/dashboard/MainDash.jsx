@@ -18,8 +18,9 @@ class MainDash extends Component {
 
     componentDidMount () {
 
+
         /*
-        fetch('/')
+        fetch('/api/')
             .then(resp => resp.json())
             .then(resp => {
                 console.log(resp);
@@ -29,6 +30,8 @@ class MainDash extends Component {
             });
 
          */
+
+
 
         this.grid = new MuuriGrid({
             node: this.gridElement,
