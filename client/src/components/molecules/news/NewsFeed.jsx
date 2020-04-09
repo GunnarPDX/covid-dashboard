@@ -3,39 +3,8 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import './NewsFeed.scss';
 
-/*
-const data = {
-  news: [
-    {
-      id: 1,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
-      date: '14.05.2020',
-      origin: 'RUS',
-      link: 'https://versions.bulma.io/0.7.0/documentation/layout/section/'
-    },
-    {
-      id: 2,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
-      date: '12.5.2020',
-      origin: 'USA',
-      link: 'https://www.google.com/'
-    },
-    {
-      id: 3,
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut',
-      date: '01.8.2020',
-      origin: 'SG',
-      link: 'https://www.reddit.com/'
-    }
-  ]
-};
-*/
-
 const NewsFeed = (props) => {
-  const allNews = props.news.articles.map(article => {
+  const allNews = props.news.data.articles.map(article => {
     return (
       <React.Fragment>
         <div className={'article-container'}>
