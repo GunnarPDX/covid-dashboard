@@ -77,7 +77,7 @@ class MainDash extends Component {
     };
 
     render () {
-        let props = testProps;
+        let props = this.state.props; //testProps;
 
         return (
             <div className={''}>
