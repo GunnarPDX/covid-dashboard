@@ -19,7 +19,7 @@ class MainDash extends Component {
     componentDidMount () {
 
 
-        /*
+
         fetch('/api/')
             .then(resp => resp.json())
             .then(resp => {
@@ -29,7 +29,6 @@ class MainDash extends Component {
                 })
             });
 
-         */
 
 
 
