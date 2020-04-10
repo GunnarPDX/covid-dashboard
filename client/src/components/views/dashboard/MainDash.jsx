@@ -20,7 +20,7 @@ class MainDash extends Component {
 
 
 
-        fetch('/api/')
+        fetch('https://damp-ravine-23091.herokuapp.com/')
             .then(resp => resp.json())
             .then(resp => {
                 console.log(resp);
