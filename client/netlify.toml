@@ -1,0 +1,6 @@
+# API proxying
+[[redirects]]
+    from = "/api/"
+    to = "https://damp-ravine-23091.herokuapp.com/"
+    status = 200
+    force = true
