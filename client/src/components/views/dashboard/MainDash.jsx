@@ -13,7 +13,7 @@ import Timeline from "../../molecules/Timeline";
 
 class MainDash extends Component {
     state = {
-        props: null
+        data: testProps
     };
 
     componentDidMount () {
@@ -23,9 +23,15 @@ class MainDash extends Component {
         fetch('https://damp-ravine-23091.herokuapp.com/')
             .then(resp => resp.json())
             .then(resp => {
-                console.log(resp);
+                //console.log(resp);
+                resp.stats.data = JSON.parse(resp.stats.data);
+                resp.news.data = JSON.parse(resp.news.data);
+                //resp.assets.spy1m = JSON.parse(resp.assets.spy1m);
+                resp.countries.data = JSON.parse(resp.countries.data);
+                resp.timeline.data = JSON.parse(resp.timeline.data);
+                //console.log(resp);
                 this.setState({
-                    props: resp
+                    data: resp
                 })
             });
 
@@ -77,9 +83,10 @@ class MainDash extends Component {
     };
 
     render () {
-        let props = this.state.props; //testProps;
+        let props = this.state.data; // testProps; //
+        console.log(props);
 
-        return (
+        if(props) return (
             <div className={''}>
 
 
@@ -118,7 +125,7 @@ class MainDash extends Component {
 
 
             </div>
-        )
+        );
     }
 }
 
