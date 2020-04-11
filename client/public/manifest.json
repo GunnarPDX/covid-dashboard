@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "COVID Dashboard",
+  "short_name": "COVID Dashboard",
   "icons": [
     {
       "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "start_url": ".",
+  "theme_color": "#252429",
+  "background_color": "#1b1b1d",
   "display": "standalone"
 }
