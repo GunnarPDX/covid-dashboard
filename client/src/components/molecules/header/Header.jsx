@@ -6,7 +6,6 @@ function numberWithCommas(x) {
 }
 
 const Header = (props) => {
-
     let cases = numberWithCommas(props.stats.data.cases);
     let deaths = numberWithCommas(props.stats.data.deaths);
     let recovered = numberWithCommas(props.stats.data.recovered);
