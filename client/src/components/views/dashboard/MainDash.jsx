@@ -81,6 +81,18 @@ class MainDash extends Component {
             this.grid.getMethod('refreshItems');
             this.grid.getMethod('layout');
         }, 1000);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 1300);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 1500);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 2000);
     };
 
     renderHeader = () => {
