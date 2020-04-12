@@ -49,8 +49,8 @@ html {
 
 // Feature-Tile Wrapper
 .tile-container {
-  width: calc(100% - 20px);
-  margin: 10px;
+  width: calc(100% - 40px);
+  margin: 20px;
   padding: 10px;
 
   background: $default-carbon;
@@ -92,6 +92,15 @@ p {
 a {
   color: #f12d81;
 
+}
+
+.hidden {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 // Global Overrides

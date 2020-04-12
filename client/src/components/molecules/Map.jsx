@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { csv } from "d3-fetch";
+//import { csv } from "d3-fetch";
 import { scaleLinear, scaleLog } from "d3-scale";
 import {
     ComposableMap,
@@ -10,23 +10,9 @@ import {
 } from "react-simple-maps";
 
 const geoUrl = "https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json";
-
 const colorScale = scaleLog().domain([1, 2000]).range(["#f87e7d", "#9f0050"]);
 
-
-
 const Map = (props) => {
-
-
-    //const [data, setData] = useState([]);
-
-    /*
-    useEffect(() => {
-        csv(`/vulnerability.csv`).then(data => {
-            setData(data);
-        });
-    }, []);
-    */
 
     return (
         <div className={'tile-container'}>
@@ -62,6 +48,7 @@ const Map = (props) => {
             </ComposableMap>
         </div>
     )
+
 };
 
 export default Map;

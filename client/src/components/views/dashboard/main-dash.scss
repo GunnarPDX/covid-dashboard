@@ -2,12 +2,30 @@
   position: relative;
 }
 
-
 .item {
   color: white;
   //cursor: grab;
   height: auto;
   position: absolute;
+}
+
+.loading-screen {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #252429;
+  z-index: 2;
+}
+
+.loading-contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -51,3 +69,234 @@
 .box2 {
   background-color: blue;
 }
+
+/// Spinner
+
+$b-height: 1.15em;
+$el-size: 3vh;
+$DNA_scale: 0.45; //divides '$el-size'
+$t: 2.1s;
+$td: -0.89;
+
+$c_a : rgb(255, 132, 144) rgb(255, 115, 124) rgb(245, 247, 249); // top / bottom / BG
+$c2_a: rgb(255, 218, 178) rgb(255, 50, 155); // Fade-anim colors
+
+$ease-circ: cubic-bezier(0.42 , 0, 0.58, 1);
+
+
+.DNA_cont {
+  display: inline-block;
+  position: relative;
+  transform: scale($DNA_scale);
+}
+
+.nucleobase {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  //  width: 1px; height: $el-size*2.75;
+  //  background: transparent;
+  //  box-shadow: $el-size*0.475 $el-size*-0.85 0 rgba(0,0,0,0.2);
+
+  &:not(:last-child){
+    margin-right: $el-size*1.62;
+  }
+
+  &:before, &:after {
+    content: "";
+    display: inline-block;
+    width: $el-size;
+    height: $el-size;
+    border-radius: 50%;
+
+    position: absolute;
+  }
+
+  @for $i from 1 through 10 {
+    &:nth-child(#{$i}) {
+      // animation: animDotBar $t $ease-circ infinite;
+
+      animation-delay: $i*($td*$t);
+      &:before {
+        // transform: translateY(-200%);
+
+        animation: animBefore $t $ease-circ infinite;
+
+        animation-delay: $i*($td*$t);
+
+        background-color: nth($c_a, 1);
+      }
+
+      &:after {
+        // transform: translateY(200%);
+
+        animation: animAfter $t $ease-circ infinite;
+
+        animation-delay: $i*($td*$t)  ;
+
+        background-color: nth($c_a, 2);
+
+        //  mix-blend-mode: multiply;
+      }
+    }
+  }
+}
+
+
+@keyframes animBefore {
+  0% {
+    top: $el-size *-2;
+    z-index: 1;
+  }
+
+  25% {
+    transform: scale(1.2) ;
+    z-index: 1;
+  }
+
+  50% {
+    // background-color: nth($c_a, 1) ;
+    top: $el-size *2;
+    z-index: -1;
+  }
+
+  75% {
+    background-color: nth($c2_a, 1);
+    transform: scale(0.8) ;
+    z-index: -1;
+  }
+
+  100% {
+
+    top: $el-size *-2;
+    z-index: -1;
+  }
+}
+
+@keyframes animAfter {
+  0% {
+    top: $el-size *2;
+    z-index: -1;
+  }
+
+  25% {
+    background-color: nth($c2_a, 2) ;
+    transform: scale(0.8) ;
+    z-index: -1;
+  }
+
+  50% {
+    //  background-color: nth($c_a, 2) ;
+    top: $el-size *-2;
+    z-index: 1;
+  }
+
+  75% {
+    transform: scale(1.2) ;
+    z-index: 1;
+  }
+
+  100% {
+    top: $el-size *2;
+    z-index: 1;
+  }
+}
+
+@keyframes animDotBar { // NOT USED
+  0% {
+    height: $el-size*2.75;
+  }
+
+  25% {
+    height: 0;
+  }
+
+  50% {
+    height: $el-size*2.75;
+  }
+
+  75% {
+    height: 0;
+  }
+
+  100% {
+    height: $el-size*2.75;
+  }
+}
+
+@keyframes superscript {
+  0% {
+    opacity: 0;
+    transform: translateY(-1em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+}
+
+//https://tobiasahlin.com/spinkit/
+
+/*
+.sk-cube-grid {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #f12d81;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+      transform: scale3D(0, 0, 1);
+    }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  } 35% {
+      -webkit-transform: scale3D(0, 0, 1);
+      transform: scale3D(0, 0, 1);
+    }
+}
+*/
