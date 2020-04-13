@@ -31,7 +31,13 @@
 @media only screen and (max-width: 768px) {
   //make tiles full width on mobile
 
-  .item-full, .item-half, .item-quarter, .item-third {
+  /*
+  .grid, .item {
+    position: static !important;
+  }
+   */
+
+  .item-full, .item-half, .item-quarter {
     width: 100% !important;
   }
 
@@ -43,31 +49,8 @@
 .item-half {
   width: 50%
 }
-.item-third {
-  width: 33.33%;
-}
 .item-quarter {
   width: 25%
-}
-
-.muuri-item-dragging {
-  z-index: 3;
-}
-
-.muuri-item-releasing {
-  z-index: 2;
-}
-
-.muuri-item-hidden {
-  z-index: 0;
-}
-
-.box1 {
-  background-color: orange;
-}
-
-.box2 {
-  background-color: blue;
 }
 
 /// Spinner

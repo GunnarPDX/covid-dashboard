@@ -1,7 +1,10 @@
 import './main-dash.scss'
+
+
 import React, {Component} from 'react'
 
 import MuuriGrid from 'react-muuri';
+
 import Map from "../../molecules/Map";
 import Twitter from "../../molecules/Twitter";
 import NewsFeed from "../../molecules/news/NewsFeed";
@@ -33,12 +36,14 @@ class MainDash extends Component {
                 })
             });
 
+
         this.grid = new MuuriGrid({
             node: this.gridElement,
             defaultOptions: {
                 dragEnabled: false
             },
         });
+
 
         this.grid.getEvent('dragEnd');
 
@@ -93,6 +98,10 @@ class MainDash extends Component {
             this.grid.getMethod('refreshItems');
             this.grid.getMethod('layout');
         }, 2000);
+        setTimeout(() => {
+            this.grid.getMethod('refreshItems');
+            this.grid.getMethod('layout');
+        }, 2500);
     };
 
     renderHeader = () => {
@@ -143,7 +152,7 @@ class MainDash extends Component {
     render () {
 
         return (
-            <div className={''}>
+            <div className={'content-container'}>
 
                 <div className={`loading-screen ${this.state.loading ? '' : 'hidden'}`}>
                     <div className={'loading-contents'}>
@@ -162,47 +171,66 @@ class MainDash extends Component {
                     </div>
                 </div>
 
-                <div ref={gridElement => this.gridElement = gridElement} className={'grid'}>
-
+                <div ref={gridElement => this.gridElement = gridElement} className={'grid hide-on-mobile'}>
                     <div className="item item-full">
                         <div className="item-content">
                             {this.renderHeader()}
                         </div>
                     </div>
-
-
                     <div className="item item-half">
                         <div className="item-content">
                             {this.renderMap()}
                         </div>
                     </div>
-
                     <div className="item item-half">
                         <div className="item-content">
                             {this.renderTotalPercentages()}
                         </div>
                     </div>
-
                     <div className="item item-half">
                         <div className="item-content">
                             {this.renderTimeline()}
                         </div>
                     </div>
-
                     <div className="item item-half">
                         <div className="item-content">
                             {this.renderNewsFeed()}
                         </div>
                     </div>
-
                     <div className="item item-half">
                         <div className="item-content">
                             <Twitter/>
                         </div>
                     </div>
-
                 </div>
 
+                <div className={'hide-on-desktop'}>
+                    <div className="item-full">
+                        <div className="item-content">
+                            {this.renderHeader()}
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            {this.renderMap()}
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            {this.renderTimeline()}
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            {this.renderNewsFeed()}
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            <Twitter/>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         );
