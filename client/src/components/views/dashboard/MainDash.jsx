@@ -258,12 +258,17 @@ class MainDash extends Component {
                     </div>
                     <div className="item-full">
                         <div className="item-content">
-                            <Twitter/>
+                            {this.renderCountryTable()}
                         </div>
                     </div>
                     <div className="item-full">
                         <div className="item-content">
-                            {this.renderCountryTable()}
+                            {this.renderFinance()}
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            <Twitter/>
                         </div>
                     </div>
                 </div>
