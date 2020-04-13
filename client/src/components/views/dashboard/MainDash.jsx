@@ -10,9 +10,11 @@ import Twitter from "../../molecules/Twitter";
 import NewsFeed from "../../molecules/news/NewsFeed";
 import TotalPercentages from "../../molecules/TotalPercentages";
 import Header from "../../molecules/header/Header";
+import CountryTable from "../../molecules/table/CountryTable";
 
 import testProps from "../../Props";
 import Timeline from "../../molecules/Timeline";
+import FinancialCharts from "../../molecules/Finance";
 
 class MainDash extends Component {
     state = {
@@ -27,7 +29,7 @@ class MainDash extends Component {
                 //console.log(resp);
                 resp.stats.data = JSON.parse(resp.stats.data);
                 resp.news.data = JSON.parse(resp.news.data);
-                //resp.assets.spy1m = JSON.parse(resp.assets.spy1m);
+                resp.assets.spy1m = JSON.parse(resp.assets.spy1m);
                 resp.countries.data = JSON.parse(resp.countries.data);
                 resp.timeline.data = JSON.parse(resp.timeline.data);
                 //console.log(resp);
@@ -149,6 +151,24 @@ class MainDash extends Component {
         }
     };
 
+    renderCountryTable = () => {
+        let props = this.state.data;
+        if(this.state.data === null){
+            return null;
+        } else {
+            return(<CountryTable {...props}/>)
+        }
+    };
+
+    renderFinance = () => {
+        let props = this.state.data;
+        if(this.state.data === null){
+            return null;
+        } else {
+            return(<FinancialCharts {...props}/>)
+        }
+    };
+
     render () {
 
         return (
@@ -202,6 +222,16 @@ class MainDash extends Component {
                             <Twitter/>
                         </div>
                     </div>
+                    <div className="item item-half">
+                        <div className="item-content">
+                            {this.renderCountryTable()}
+                        </div>
+                    </div>
+                    <div className="item item-half">
+                        <div className="item-content">
+                            {this.renderFinance()}
+                        </div>
+                    </div>
                 </div>
 
                 <div className={'hide-on-desktop'}>
@@ -228,6 +258,11 @@ class MainDash extends Component {
                     <div className="item-full">
                         <div className="item-content">
                             <Twitter/>
+                        </div>
+                    </div>
+                    <div className="item-full">
+                        <div className="item-content">
+                            {this.renderCountryTable()}
                         </div>
                     </div>
                 </div>
