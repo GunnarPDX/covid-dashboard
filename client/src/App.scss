@@ -37,6 +37,11 @@ html {
     padding: 0 !important;
     margin: 0 !important;
   }
+
+  .tile-container {
+    width: calc(100% - 20px) !important;
+    margin: 10px !important;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -117,6 +122,7 @@ a {
 }
 
 // Global Overrides
+
 .columns {
   margin-bottom: 0 !important;
 }

@@ -1,0 +1,32 @@
+.table {
+  background-color: #323137;
+  border-radius: 5px;
+
+  th {
+    background-color: #252429;
+  }
+
+  /*
+  tr:nth-child(even) {
+    background-color: #252429;
+  }
+  */
+}
+
+.scrollable-body {
+  height: 400px;
+  overflow-y: scroll;
+}
+
+.country-title {
+  font-size: 1.25rem;
+  color: #f3f4f7;
+}
+
+.cases-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  background: -webkit-linear-gradient(135deg, #fb816c, #f12d81, #e50092);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

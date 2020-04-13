@@ -38,7 +38,10 @@ const Timeline = (props) => {
                 background: "#252429"
             },
             xaxis: {
-                categories: dateArr
+                categories: dateArr,
+                labels: {
+                    show: false
+                }
             },
             colors: [ "#e334e5", '#41d2e7'],
             stroke: {
