@@ -30,6 +30,7 @@ class MainDash extends Component {
                 resp.stats.data = JSON.parse(resp.stats.data);
                 resp.news.data = JSON.parse(resp.news.data);
                 resp.assets.spy1m = JSON.parse(resp.assets.spy1m);
+                resp.assets.btc1m = JSON.parse(resp.assets.btc1m);
                 resp.countries.data = JSON.parse(resp.countries.data);
                 resp.timeline.data = JSON.parse(resp.timeline.data);
                 //console.log(resp);
@@ -214,12 +215,7 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            {this.renderNewsFeed()}
-                        </div>
-                    </div>
-                    <div className="item item-half">
-                        <div className="item-content">
-                            <Twitter/>
+                            {this.renderFinance()}
                         </div>
                     </div>
                     <div className="item item-half">
@@ -229,7 +225,12 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            {this.renderFinance()}
+                            {this.renderNewsFeed()}
+                        </div>
+                    </div>
+                    <div className="item item-half">
+                        <div className="item-content">
+                            <Twitter/>
                         </div>
                     </div>
                 </div>

@@ -36,7 +36,7 @@ const NewsFeed = (props) => {
   return (
     <div className={'tile-container'}>
       <h1 className={''}>Global News</h1>
-      <SimpleBar style={{ maxHeight: 350 }}>
+      <SimpleBar style={{ maxHeight: 450 }}>
         <section className={'section'}>
           <div className={'container'}>
             <h2> {allNews}</h2>
