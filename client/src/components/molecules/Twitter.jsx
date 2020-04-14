@@ -3,7 +3,7 @@ import React from 'react'
 import { TwitterTimelineEmbed } from 'react-twitter-embed';
 
 
-const Twitter = () => {
+const Twitter = (props) => {
     return (
         <div className={'tile-container'}>
             <h1>#COVID Twitter</h1>
@@ -16,6 +16,7 @@ const Twitter = () => {
             noHeader
             noFooter
             transparent
+            onLoad={props.callback()}
             />
         </div>
     )

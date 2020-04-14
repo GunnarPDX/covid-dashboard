@@ -50,13 +50,13 @@ class MainDash extends Component {
 
         this.grid.getEvent('dragEnd');
 
-        this.refreshGrid();
+        //this.refreshGrid();
 
         setTimeout(() => {
             this.setState({
                 loading: false
             })
-        }, 3000);
+        }, 2500);
 
     }
 
@@ -230,7 +230,7 @@ class MainDash extends Component {
                     </div>
                     <div className="item item-half">
                         <div className="item-content">
-                            <Twitter/>
+                            <Twitter callback={() => this.refreshGrid()}/>
                         </div>
                     </div>
                 </div>
@@ -268,7 +268,7 @@ class MainDash extends Component {
                     </div>
                     <div className="item-full">
                         <div className="item-content">
-                            <Twitter/>
+                            {<Twitter callback={() => this.refreshGrid()}/>}
                         </div>
                     </div>
                 </div>
