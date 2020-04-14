@@ -1,50 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
 import Chart from "react-apexcharts";
 
 const FinancialCharts = (props) => {
-
-/*
-    const spyPrices = (data) => {
-        let arr = [];
-        let spy = data.assets.spy1m['Time Series (Daily)'];
-
-        for (let key in spy) {
-            if (spy.hasOwnProperty(key)) {
-                //console.log(spy[key]);
-                let datapoint = {
-                    x: key,
-                    y: [spy[key].open, spy[key].high, spy[key].low, spy[key].close]
-                };
-                arr.push(data.assets.btc1m);
-            }
-        }
-        return arr;
-    };
-
-    /*
-    const btcPrices = (data) => {
-        let arr = [];
-        for(let i = 0; i < data.assets.btc1m.length; i++) {
-            let datapoint = {
-                x: new Date(1538778600000),
-                y: [6629.81, 6650.5, 6623.04, 6633.33]
-            };
-
-            arr.push(data.assets.btc1m);
-        }
-        return arr;
-    };
-
-    React.useEffect(() => {
-        setSpyArr(spyPrices(props));
-        //setBtcArr(btcPrices(props));
-    }, [props]);
-
-
-    const [spyArr, setSpyArr] = useState(spyPrices(props));
-    //const [btcArr, setBtcArr] = useState(btcPrices(props));
-
-*/
 
     let spy = props.assets.spy1m['Time Series (Daily)'];
     let spyArr = [];
