@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 //import { csv } from "d3-fetch";
-import { scaleLinear, scaleLog } from "d3-scale";
+import { scaleLog } from "d3-scale";
 import {
     ComposableMap,
     Geographies,

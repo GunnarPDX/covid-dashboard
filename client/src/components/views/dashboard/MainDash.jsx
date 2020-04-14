@@ -12,7 +12,7 @@ import TotalPercentages from "../../molecules/TotalPercentages";
 import Header from "../../molecules/header/Header";
 import CountryTable from "../../molecules/table/CountryTable";
 
-import testProps from "../../Props";
+//import testProps from "../../Props";
 import Timeline from "../../molecules/Timeline";
 import FinancialCharts from "../../molecules/Finance";
 
