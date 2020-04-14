@@ -23,7 +23,7 @@ const NewsFeed = (props) => {
             <div className={'level-right'}>
               <div className={'level-item'}>
                 <h3 className={'has-text-info'}>
-                  <a href={article.url} target="_blank"> LEARN MORE ></a>
+                  <a href={article.url} rel="noopener noreferrer" target="_blank"> LEARN MORE ></a>
                 </h3>
               </div>
             </div>
