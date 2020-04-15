@@ -2,6 +2,10 @@
   position: relative;
 }
 
+.grid-container {
+
+}
+
 .item {
   color: white;
   //cursor: grab;
@@ -47,10 +51,10 @@
   width: 100%;
 }
 .item-half {
-  width: 50%
+  width: 50%;
 }
 .item-quarter {
-  width: 25%
+  width: 25%;
 }
 
 /// Spinner
