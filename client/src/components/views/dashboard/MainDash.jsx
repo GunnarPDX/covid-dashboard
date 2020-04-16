@@ -16,8 +16,7 @@ import FinancialCharts from "../../molecules/Finance";
 
 class MainDash extends Component {
     state = {
-        data: null,
-        loading: true
+        data: null
     };
 
     componentDidMount () {
@@ -37,83 +36,13 @@ class MainDash extends Component {
                 })
             });
 
-        setTimeout(() => {
-            this.setState({
-                loading: false
-            })
-        }, 1500);
-
     }
 
-    renderHeader = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<Header {...props}/>)
-        }
-    };
-
-    renderMap = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<Map {...props}/>)
-        }
-    };
-
-    renderTotalPercentages = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<TotalPercentages {...props}/>)
-        }
-    };
-
-    renderTimeline = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<Timeline {...props}/>)
-        }
-    };
-
-    renderNewsFeed = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<NewsFeed {...props}/>)
-        }
-    };
-
-    renderCountryTable = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<CountryTable {...props}/>)
-        }
-    };
-
-    renderFinance = () => {
-        let props = this.state.data;
-        if(this.state.data === null){
-            return null;
-        } else {
-            return(<FinancialCharts {...props}/>)
-        }
-    };
-
     render () {
-
-        return (
-            <div className={'content-container'}>
-
-                <div className={`loading-screen ${this.state.loading ? '' : 'hidden'}`}>
+        let props = this.state.data;
+        if(this.state.data === null){
+            return (
+                <div className={`loading-screen`}>
                     <div className={'loading-contents'}>
                         <div className="DNA_cont">
                             <div className="nucleobase"/>
@@ -129,25 +58,27 @@ class MainDash extends Component {
                         </div>
                     </div>
                 </div>
-
-                {this.renderHeader()}
-
-                <div className="columns is-gapless">
-                    <div className="column item-half">
-                        {this.renderMap()}
-                        {this.renderFinance()}
-                        {this.renderNewsFeed()}
-                    </div>
-                    <div className="column item-half">
-                        {this.renderTotalPercentages()}
-                        {this.renderTimeline()}
-                        {this.renderCountryTable()}
-                        <Twitter/>
+            )
+        } else {
+            return (
+                <div>
+                    <Header {...props}/>
+                    <div className="columns is-gapless">
+                        <div className="column item-half">
+                            <Map {...props}/>
+                            <FinancialCharts {...props}/>
+                            <NewsFeed {...props}/>
+                        </div>
+                        <div className="column item-half">
+                            <TotalPercentages {...props}/>
+                            <Timeline {...props}/>
+                            <CountryTable {...props}/>
+                            <Twitter/>
+                        </div>
                     </div>
                 </div>
-
-            </div>
-        );
+            )
+        }
     }
 }
 
