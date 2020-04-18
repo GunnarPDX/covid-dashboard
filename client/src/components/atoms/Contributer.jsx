@@ -2,6 +2,20 @@ import React from 'react'
 
 const Contributor = (props) => {
 
+    /*
+        Required props are: name and imgUrl
+        Non-Required (haven't been added yet): github, linkedIn, and Portfolio
+    */
+
+    /* TODO: make conditional render function for non-required props + call the functions in the main return block */
+    const renderGithubLink = () => {
+        if(props.githubLink){
+            return (
+                <p><a href={props.githubLink} target="_blank">Github</a></p>
+            )
+        } else return null;
+    };
+
     return (
         <div className={"level-item has-text-centered"} id="#1">
             <div>
@@ -15,6 +29,7 @@ const Contributor = (props) => {
                     <div className="dropdown-menu" id="dropdown-menu4" role="menu">
                         <div className="dropdown-content">
                             <div className="dropdown-item">
+                                {/* renderGithubLink() */}
                                 <p><a href={'https://www.github.com'} target="_blank">Github</a></p>
                                 <p><a href={'https://www.linkedin.com'} target="_blank">LinkedIn</a></p>
                                 <p><a href={''} target="_blank">Portfolio</a></p>
