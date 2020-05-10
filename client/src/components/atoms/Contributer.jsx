@@ -15,7 +15,20 @@ const Contributor = (props) => {
             )
         } else return null;
     };
-
+    const renderLinkedInLink = () => {
+        if(props.linkedInLink){
+            return (
+                <p><a href={props.linkeInLink} target="_blank">LinkedIn</a></p>
+            )
+        }
+    }
+    const renderPortfolioLink = () => {
+        if(props.portfolioLink) {
+            return (
+                <p><a href={props.portfolioLink} target="_blank">Portfolio</a></p>
+            )
+        }
+    }
     return (
         <div className={"level-item has-text-centered"} id="#1">
             <div>
@@ -29,10 +42,9 @@ const Contributor = (props) => {
                     <div className="dropdown-menu" id="dropdown-menu4" role="menu">
                         <div className="dropdown-content">
                             <div className="dropdown-item">
-                                {/* renderGithubLink() */}
-                                <p><a href={'https://www.github.com'} target="_blank">Github</a></p>
-                                <p><a href={'https://www.linkedin.com'} target="_blank">LinkedIn</a></p>
-                                <p><a href={''} target="_blank">Portfolio</a></p>
+                                {renderGithubLink()}
+                                {renderLinkedInLink()}
+                                {renderPortfolioLink()}
                             </div>
                         </div>
                     </div>
