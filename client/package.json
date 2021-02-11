@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
-    "apexcharts": "^3.18.1",
+    "apexcharts": "^3.24.0",
     "d3-fetch": "^1.1.2",
     "d3-scale": "^3.2.1",
     "node-sass": "^4.13.1",
